@@ -6,7 +6,7 @@ namespace real_time_weather_monitoring_and_reporting_service.Strategy.Bots
         public bool Enabled { get; set; }
 
         public string Message { get; set; }
-        public void ActivateBot();
+         void ActivateBot();
 
 
 

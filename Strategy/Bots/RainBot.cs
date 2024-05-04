@@ -14,12 +14,13 @@ namespace real_time_weather_monitoring_and_reporting_service.Strategy.Bots
 
 
         [JsonPropertyName("message")]
-        public string Message { get; set; }
+        public string? Message { get; set; }
 
 
 
         public void ActivateBot()
         {
+            Console.WriteLine("RainBot Activated");
             Console.WriteLine("It looks like it's about to pour down!");
         }
         public override string ToString()

@@ -17,6 +17,7 @@ namespace real_time_weather_monitoring_and_reporting_service.Strategy.Bots
 
         public void ActivateBot()
         {
+            Console.WriteLine("SunBot Activated");
             Console.WriteLine("Wow, it's a scorcher out there!");
         }
         public override string ToString()

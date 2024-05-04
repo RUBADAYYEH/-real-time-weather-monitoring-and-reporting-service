@@ -9,12 +9,12 @@ namespace real_time_weather_monitoring_and_reporting_service.Strategy
         float TemperatureThreshold { get; set; } = humidityThreshold;
         float HumidityThreshold { get; set; } = temperatureThreshold;
 
-        public List<IWeatherBot>? GetActivatedBots()
+        public List<IWeatherBot> GetActivatedBots()
         {
             var activationRulesForHumidityThresholdBots = GetActivationRulesForHumidityBots();
             var activationRulesForTempratureThresholdBots = GetActivationRulesForTempratureBots();
             var weatherBots = Bots.Where(e => e.GetType() == typeof(RainBot) ? GetHumidityBotWithActivation(e, activationRulesForHumidityThresholdBots) : GetTempratureBotWithActivation(e, activationRulesForTempratureThresholdBots)).ToList();
-            return weatherBots.Count == 0 ? [.. weatherBots] : null;
+            return   [.. weatherBots] ;
         }
     
         public static bool GetHumidityBotWithActivation(IWeatherBot R, List<Func<IWeatherBot, bool>> Rules)

@@ -1,10 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
+
 
 namespace real_time_weather_monitoring_and_reporting_service.Strategy.Bots
 {
@@ -18,11 +13,12 @@ namespace real_time_weather_monitoring_and_reporting_service.Strategy.Bots
 
 
         [JsonPropertyName("message")]
-        public string Message { get; set; }
+        public string? Message { get; set; }
 
 
         public void ActivateBot()
         {
+            Console.WriteLine("SnowBot Activated");
             Console.WriteLine("Brrr, it's getting chilly!");
         }
         public override string ToString()

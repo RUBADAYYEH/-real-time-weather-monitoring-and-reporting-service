@@ -1,12 +1,15 @@
-﻿using System.Text.Json;
+﻿
 using real_time_weather_monitoring_and_reporting_service.Strategy.Bots;
+using System.Text.Json;
 
 
-namespace real_time_weather_monitoring_and_reporting_service.BotConfigurationLoader
+namespace real_time_weather_monitoring_and_reporting_service.BotConfigurationLoader.DataManagement.Json
 {
-    public class ConfigurationLoader
+    public class JsonLoader : IConfigurationLoader
     {
-        public static List<IWeatherBot> LoadAllConfigs(string path)
+     
+
+        public List<IWeatherBot> LoadAllConfigs(string path)
         {
             try
             {
@@ -40,6 +43,6 @@ namespace real_time_weather_monitoring_and_reporting_service.BotConfigurationLoa
 
         }
 
-
+      
     }
 }
